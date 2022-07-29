@@ -27,7 +27,6 @@
 #
 #     return new[:-1]
 def solution(s):
-    s = [s[i].upper() if i%2 ==0 else s[i] for i in range(len(s))]
-    return ''.join(s)
+    return ' '.join(list(map( lambda x: ''.join( [j.upper() if i %2 ==0 else j.lower() for i, j in enumerate(x)]), s.split(' '))))
 
 print(solution("try hello world"))
