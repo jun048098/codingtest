@@ -30,3 +30,16 @@ def solution(n, lost, reserve):
 
     return answer
 print(solution(5,	[2, 4],	[5,3,1]))
+
+
+def solution(n, lost, reserve):
+    new_lost = [i for i in lost if i not in reserve]
+    new_reserve = [i for i in reserve if i not in lost]
+    for i in new_lost:
+        if i-1 in new_reserve:
+            new_lost.remove(i)
+            new_reserve.remove(i)
+        elif i+1 in new_reserve:
+            new_lost.remove(i)
+            new_reserve.remove(i)
+        return n - len(new_lost)
