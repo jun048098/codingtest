@@ -1,10 +1,16 @@
 participant= ["mislav", "stanko", "mislav", "ana"]
 completion=["stanko", "ana", "mislav"]
-# answer = [i for i in participant if i not in completion]
-# print(answer[0])
-answer=[]
-for i in range(len(participant)):
-    if participant[i] not in completion:
-        answer.append(participant[i])
+# def s(p,c):
+#     p.sort()
+#     c.sort()
+#     for i in range(len(c)):
+#         if c[i] != p[i]:
+#             return p[i]
+#     return p[-1]
+# print(s(participant, completion))
 
-print(answer)
+import collections
+def solution(p,c):
+    a = collections.Counter(p) - collections.Counter(c)
+    return  list(a.keys())[0]
+print(solution(participant, completion))
