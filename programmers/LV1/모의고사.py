@@ -65,3 +65,23 @@ def solution(answers):
 
     return answer, rating
 print(solution([1,3,2,4,2]))
+
+########
+def solution(answers):
+    score = [0, 0, 0, 0]
+    result = []
+    a = [1, 2, 3, 4, 5]
+    b = [2, 1, 2, 3, 2, 4, 2, 5]
+    c = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
+    for i, j in enumerate(answers):
+        if j == a[i % len(a)]:
+            score[1] += 1
+        if j == b[i % len(b)]:
+            score[2] += 1
+        if j == c[i % len(c)]:
+            score[3] += 1
+    for i, j in enumerate(score):
+        if j == max(score):
+            result.append(i)
+
+    return result
