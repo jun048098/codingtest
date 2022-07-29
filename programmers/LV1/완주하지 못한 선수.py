@@ -9,6 +9,7 @@ completion=["stanko", "ana", "mislav"]
 #     return p[-1]
 # print(s(participant, completion))
 
+
 import collections
 def solution(p,c):
     a = collections.Counter(p) - collections.Counter(c)
