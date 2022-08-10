@@ -11,13 +11,3 @@
 #
 # print(solution("AB"	,1))
 
-
-def solution(s, n):
-    s = list(s)
-    a=[]
-    for i in s:
-        if i.islower():
-            a.append(chr((ord(i) - ord('a') +n) % 26 +ord('a')))
-        elif i.isupper():
-            a.append(chr((ord(i)-ord('A')+n)%26 +ord('A')))
-    return ''.join(a)
