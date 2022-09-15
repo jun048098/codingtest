@@ -1,4 +1,3 @@
-
 def solution(n):
     a1 = 0
     a2 = 1
