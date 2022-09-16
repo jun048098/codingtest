@@ -50,7 +50,7 @@ def dfs(x,y):
             nx = x + dx[i]
             ny = y + dy[i]
             dfs(nx, ny)
-        return True
+            return True
     return False
 
 num = []
