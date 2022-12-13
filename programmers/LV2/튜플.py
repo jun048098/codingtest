@@ -1,7 +1,5 @@
 def solution(s):
-    s = s.replace('{', '')
-    s = s[:-2]
-    s = s.split('},')
+    s = s.lstrip('{').rstrip('}').split('},{')
     s.sort(key=len)
     t = [int(s[0])]
 
