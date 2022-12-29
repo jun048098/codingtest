@@ -20,6 +20,8 @@ from collections import Counter
 #                 answer.append(k)
 #     return sorted(answer)
 
+from itertools import combinations
+from collections import Counter
 def solution(orders, course):
     answer = []
     for c in course:
