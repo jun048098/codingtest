@@ -1,3 +1,11 @@
+# from math import gcd
+# def solution(arr):
+#     answer = arr[0]
+#     for i in arr:
+#         answer = answer * i // gcd(answer, i)
+#     return answer
+
+
 import numpy as np
 def solution(arr):
     arr = np.array(arr)
@@ -12,7 +20,7 @@ def solution(arr):
                     break
                 cnt+=1
             if cnt == len(arr)-i:
-               arr //= arr[i]
+                arr //= arr[i]
     return n
 
-print(solution([1,2,3]))
+print(solution([2,6,8,14]))
